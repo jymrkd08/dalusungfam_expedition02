@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Dalusung Expedition | Archives</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body class="interior-theme">
+    
+    <div id="transition-overlay">
+    <div class="transition-line"></div>
+    <div class="transition-text">ACCESSING_DATA...</div>
+</div>
+    <div id="cursor-glow"></div>
+    <div id="scanner-line"></div>
+
+    <nav>
+        <div class="logo-wrapper">
+            <a href="index.html" class="logo">DALUSUNG<span>.</span></a>
+        </div>
+        <a href="index.html" class="back-btn">RETURN TO BASE</a>
+    </nav>
+<div class="vault-filters" data-aos="fade-down">
+    <button class="filter-btn active" onclick="filterVault('all')">ALL_FILES</button>
+    <button class="filter-btn" onclick="filterVault('parents')">PARENTS</button>
+    <button class="filter-btn" onclick="filterVault('kids')">KIDS</button>
+</div>
+
+<div class="memory-grid-page" id="vault-grid"></div>
+    <div class="memory-grid-page" id="vault-grid"></div>
+
+    <div id="lightbox" onclick="closeLightbox()">
+        <span class="close-lb">&times;</span>
+        <img id="lightbox-img" src="" onclick="event.stopPropagation()">
+        <div id="image-counter"></div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
