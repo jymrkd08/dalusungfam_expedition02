@@ -690,5 +690,62 @@ nav {
     color: black;
 }
 
+/* --- MOBILE RESPONSIVENESS --- */
+
+@media (max-width: 768px) {
+    /* 1. Adjust the Hero/Title Text */
+    h1 {
+        font-size: 2.5rem !important; /* Makes the "DALUSUNG" title smaller */
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem !important;
+    }
+
+    /* 2. Fix the Personnel Grid (Dossiers) */
+    /* If you are using Flexbox or Grid for the family members */
+    .personnel-grid, .dossier-container { 
+        display: grid !important;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)) !important;
+        gap: 15px !important;
+        padding: 10px;
+    }
+
+    /* 3. Make Images responsive */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* 4. Fix the Chronicle/Timeline */
+    .chronicle-entry {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    /* 5. Adjust Padding for small screens */
+    section {
+        padding: 20px 15px !important;
+    }
+
+    /* 6. Navigation (if any) */
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Extra small screens (Phones) */
+@media (max-width: 480px) {
+    .personnel-grid {
+        grid-template-columns: 1fr 1fr !important; /* Shows 2 members per row */
+    }
+    
+    .dalusung-creed h2 {
+        font-size: 1.2rem !important;
+    }
+}
+
 
 
